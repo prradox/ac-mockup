@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Audit</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Audit Creator</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="create-an-audit.html">Create an audit <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">View all audits</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <div class="accordion" id="categoryAccordion">
+          <div class="card">
+            <div class="card-header" id="analyticsHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#analyticsCollapse"
+                  aria-expanded="true" aria-controls="analyticsCollapse">
+                  Analytics
+                </button>
+              </h2>
+            </div>
+
+            <div id="analyticsCollapse" class="collapse show" aria-labelledby=analyticsHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="newRecommendation my-5" id="newReco1">
+                  <form>
+                    <div class="row justify-content-center">
+                      <div class="col-10 shadow-lg bg-light py-3 text-dark">
+                        <div class="cardControls text-right">
+                          <button class="button btn-lg btn-success h5 shrinkRecommendationButton">_</button>
+                          <button class="button btn-lg btn-danger h5 closeRecommendationButton">X</button>
+                        </div>
+                        <div class="form-group">
+                          <label for="analyticsRecommendation1Title" class="col col-form-label h5">Title</label>
+                          <input type="text" class="form-control" id="analyticsRecommendation1Title">
+                        </div>
+                        <div class="recommendationContent">
+                          <fieldset class="form-group ml-3">
+                            <label class="d-block col-form-label h5">Priority</label>
+                            <div class="form-check d-inline-block mr-3">
+                              <input class="form-check-input" type="radio" name="analyticsPriority"
+                                id="analyticsPriorityRed" value="priorityRed" checked>
+                              <label class="form-check-label h5 text-danger" for="analyticsPriorityRed">
+                                Red
+                              </label>
+                            </div>
+                            <div class="form-check d-inline-block mr-3">
+                              <input class="form-check-input" type="radio" name="analyticsPriority"
+                                id="analyticsPriorityOrange" value="priorityOrange">
+                              <label class="form-check-label h5 text-warning" for="analyticsPriorityOrange">
+                                Orange
+                              </label>
+                            </div>
+                            <div class="form-check d-inline-block mr-3">
+                              <input class="form-check-input" type="radio" name="analyticsPriority"
+                                id="analyticsPriorityGreen" value="priorityGreen">
+                              <label class="form-check-label h5 text-success" for="analyticsPriorityGreen">
+                                Green
+                              </label>
+                            </div>
+                          </fieldset>
+                          <div class="form-group">
+                            <label for="analyticsRecommendation1Body" class="col col-form-label h5">Body</label>
+                            <textarea rows=8 class="form-control" id="analyticsRecommendation1Body"></textarea>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <img src="img/screenshot-example.png" class="img-fluid shadow-lg border border-dark">
+                            <div class="form-group">
+                              <label for="analyticsRecommendation1ImageCaption" class="col col-form-label h5">Image
+                                URL</label>
+                              <input type="text" class="form-control h5"
+                                value="https://some.image.com/link.png"></input>
+                            </div>
+                            <div class="form-group">
+                              <label for="analyticsRecommendation1ImageCaption"
+                                class="col col-form-label h5">ImageCaption</label>
+                              <input type="text" class="form-control" id="analyticsRecommendation1ImageCaption">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="analyticsRecommendation1Step1" class="col col-form-label h5">Steps</label>
+                            <input type="text" class="form-control" id="analyticsRecommendation1Step1">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="analyticsRecommendation1Step2">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="analyticsRecommendation1Step3">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="analyticsRecommendation1Step4">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="analyticsRecommendation1Step5">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="designHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#designCollapse" aria-expanded="false" aria-controls="designCollapse">
+                  Design
+                </button>
+              </h2>
+            </div>
+            <div id="designCollapse" class="collapse" aria-labelledby="designHeader" data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="buyersJourneyHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#buyersJourneyCollapse" aria-expanded="false" aria-controls="buyersJourneyCollapse">
+                  Buyer's Journey
+                </button>
+              </h2>
+            </div>
+            <div id="buyersJourneyCollapse" class="collapse" aria-labelledby="buyersJourneyHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="homepageHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#homepageCollapse"
+                  aria-expanded="true" aria-controls="homepageCollapse">
+                  Homepage
+                </button>
+              </h2>
+            </div>
+
+            <div id="homepageCollapse" class="collapse" aria-labelledby="homepageHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="productPageHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#productPageCollapse" aria-expanded="false" aria-controls="productPageCollapse">
+                  Product Page
+                </button>
+              </h2>
+            </div>
+            <div id="productPageCollapse" class="collapse" aria-labelledby="productPageHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="collectionHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collectionCollapse" aria-expanded="false" aria-controls="collectionCollapse">
+                  Collection
+                </button>
+              </h2>
+            </div>
+            <div id="collectionCollapse" class="collapse" aria-labelledby="collectionHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="contentPagesHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentPagesCollapse"
+                  aria-expanded="true" aria-controls="contentPagesCollapse">
+                  Content Pages
+                </button>
+              </h2>
+            </div>
+
+            <div id="contentPagesCollapse" class="collapse" aria-labelledby="contentPagesHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headerAndFooterHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#headerAndFooterCollapse" aria-expanded="false" aria-controls="headerAndFooterCollapse">
+                  Header and Footer
+                </button>
+              </h2>
+            </div>
+            <div id="headerAndFooterCollapse" class="collapse" aria-labelledby="headerAndFooterHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="navigationHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#navigationCollapse" aria-expanded="false" aria-controls="navigationCollapse">
+                  Navigation
+                </button>
+              </h2>
+            </div>
+            <div id="navigationCollapse" class="collapse" aria-labelledby="navigationHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="performanceHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#performanceCollapse" aria-expanded="false" aria-controls="performanceCollapse">
+                  Performance
+                </button>
+              </h2>
+            </div>
+            <div id="performanceCollapse" class="collapse" aria-labelledby="performanceHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="onSiteSeoHeader">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#onSiteSeoCollapse" aria-expanded="false" aria-controls="onSiteSeoCollapse">
+                  On-site SEO
+                </button>
+              </h2>
+            </div>
+            <div id="onSiteSeoCollapse" class="collapse" aria-labelledby="onSiteSeoHeader"
+              data-parent="#categoryAccordion">
+              <div class="card-body">
+                <div class="recomendationPool">
+                  <form class="row justify-content-center mb-5">
+                    <div class="col-10 bg-light text-dark py-4">
+                      <label for="validationCustom04" class="h5">Select a new recommendation</label>
+                      <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Top Searches Report</option>
+                        <option>Some other recommendation</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                      <button class="button btn-lg btn-dark btn-block mt-4 addRecommendationButton">Add new
+                        recommendation</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="recommendationTemplate" class="newRecommendation my-5 d-none" id="newReco1">
+    <form>
+      <div class="row justify-content-center">
+        <div class="col-10 shadow-lg bg-light py-3 text-dark">
+          <div class="cardControls text-right">
+            <button class="button btn-lg btn-success h5 shrinkRecommendationButton">_</button>
+            <button class="button btn-lg btn-danger h5 closeRecommendationButton">X</button>
+          </div>
+          <div class="form-group">
+            <label for="analyticsRecommendation1Title" class="col col-form-label h5">Title</label>
+            <input type="text" class="form-control" id="analyticsRecommendation1Title">
+          </div>
+          <div class="recommendationContent">
+            <fieldset class="form-group ml-3">
+              <label class="d-block col-form-label h5">Priority</label>
+              <div class="form-check d-inline-block mr-3">
+                <input class="form-check-input" type="radio" name="analyticsPriority" id="analyticsPriorityRed"
+                  value="priorityRed" checked>
+                <label class="form-check-label h5 text-danger" for="analyticsPriorityRed">
+                  Red
+                </label>
+              </div>
+              <div class="form-check d-inline-block mr-3">
+                <input class="form-check-input" type="radio" name="analyticsPriority" id="analyticsPriorityOrange"
+                  value="priorityOrange">
+                <label class="form-check-label h5 text-warning" for="analyticsPriorityOrange">
+                  Orange
+                </label>
+              </div>
+              <div class="form-check d-inline-block mr-3">
+                <input class="form-check-input" type="radio" name="analyticsPriority" id="analyticsPriorityGreen"
+                  value="priorityGreen">
+                <label class="form-check-label h5 text-success" for="analyticsPriorityGreen">
+                  Green
+                </label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label for="analyticsRecommendation1Body" class="col col-form-label h5">Body</label>
+              <textarea rows=8 class="form-control" id="analyticsRecommendation1Body"></textarea>
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+              <img src="img/screenshot-example.png" class="img-fluid shadow-lg border border-dark">
+              <div class="form-group">
+                <label for="analyticsRecommendation1ImageCaption" class="col col-form-label h5">Image
+                  URL</label>
+                <input type="text" class="form-control h5" value="https://some.image.com/link.png"></input>
+              </div>
+              <div class="form-group">
+                <label for="analyticsRecommendation1ImageCaption" class="col col-form-label h5">ImageCaption</label>
+                <input type="text" class="form-control" id="analyticsRecommendation1ImageCaption">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="analyticsRecommendation1Step1" class="col col-form-label h5">Steps</label>
+              <input type="text" class="form-control" id="analyticsRecommendation1Step1">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="analyticsRecommendation1Step2">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="analyticsRecommendation1Step3">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="analyticsRecommendation1Step4">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="analyticsRecommendation1Step5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

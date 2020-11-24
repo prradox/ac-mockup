@@ -1,0 +1,42 @@
+.h-100 {
+    height: 100%;
+}
+
+.h-full {
+    margin-top: 5vh;
+    height: 95vh;
+}
+
+#leftpane {
+    height: 100vh;
+}
+
+.form-control {
+    padding: 0 0.5rem;
+    height: calc(1em + 1rem + 10px);
+    background-color: #adb5bd;
+    border-color: transparent;
+    color: black;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    background-color: #ced4da;
+    color: black;
+}
+
+input,
+textarea {
+    box-shadow: 1px 1px 8px #e9ecef inset;
+    transition: box-shadow 0.25s ease-in;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: none;
+}
+
+#categoryAccordion {
+
+    margin-top: 75px;
+}
